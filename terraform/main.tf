@@ -19,10 +19,11 @@ resource "aws_security_group" "web_sg" {
   }
 
   egress {
-    description = "Allow outbound traffic only to HTTPS"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  description = "Allow outbound traffic only to internal network"
+  from_port   = 443
+  to_port     = 443
+  protocol    = "tcp"
+  cidr_blocks = ["192.168.1.0/24"]   # ✅ restricted egress
+}
+
 }

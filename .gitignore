@@ -1,0 +1,8 @@
+# Terraform
+terraform/.terraform/
+terraform/terraform.exe
+*.tfstate
+*.tfstate.backup
+
+# OS / misc
+.DS_Store
